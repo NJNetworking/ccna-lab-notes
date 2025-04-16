@@ -1,4 +1,4 @@
-# Video 5 & 6#
+# Video 5 & 6 #
 
 ---
 # Ethernet switching #
