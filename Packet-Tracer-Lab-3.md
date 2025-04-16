@@ -32,7 +32,8 @@ While my main focus was DHCP and **observing the OSI layers**, several other pro
 
 ![Lab Screenshot 1](lab3-1.png)  
 ![Lab Screenshot 2](lab3-2.png)  
-![Lab Screenshot 3](lab3-3.png)  
+![Lab Screenshot 3](lab3-3.png) 
+![Lab Screenshot 4](lab3-4.png)  
 
 ---
 
