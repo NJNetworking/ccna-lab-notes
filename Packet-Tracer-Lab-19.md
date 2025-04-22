@@ -1,4 +1,4 @@
-# Packet Tracer Lab 19 — VTP, VLANs, and Trunking Configuration #
+# Packet Tracer Lab 19 — VTP, VLANs and DTP negotiation #
 
 ---
 
