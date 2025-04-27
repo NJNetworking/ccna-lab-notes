@@ -112,6 +112,33 @@ The EIGRP Router ID is a unique 32-bit value used to identify a router in an EIG
 
 ---
 
+## Feasible Distance (FD)
+- The Feasible Distance is the **lowest calculated metric** (cost) to reach a destination network from the local router.
+- It is the value used in the routing table for the best path.
+
+## Reported Distance (RD)
+- The Reported Distance is the **metric advertised** by a neighbor router about how far it is from the destination network.
+- It represents the neighbor's own Feasible Distance to the destination.
+
+## Successor
+- The Successor is the **best next-hop router** for reaching a destination.
+- It is the path with the **lowest Feasible Distance**, and is placed directly into the routing table.
+
+## Feasible Successor
+- The Feasible Successor is a **backup route** to a destination.
+- It must satisfy the **Feasibility Condition**: its Reported Distance must be **less than** the Feasible Distance of the Successor.
+- If the Successor fails, the Feasible Successor can immediately take over without recalculating.
+
+## Example:
+- Router A learns about 10.0.0.0/24:
+  - From Router B: RD = 200, calculated FD = 250
+  - From Router C: RD = 100, calculated FD = 150
+
+- Router C becomes the **Successor** (lower FD 150).
+- Router B can become a **Feasible Successor** if its RD (200) is **less than** Router C's FD (150), but here 200 > 150, so Router B would **not** qualify as Feasible Successor.
+
+---
+
 
 
   
