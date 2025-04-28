@@ -1,4 +1,4 @@
-# Packet Tracer Lab 24 — OSPF Setup with ASBR and Default Route Advertisement #
+# Packet Tracer Lab 26 — OSPF Setup with ASBR and Default Route Advertisement #
 
 ---
 
@@ -55,9 +55,9 @@ All routers correctly learned the default route through R1, enabling seamless in
 
 ## Screenshots ##
 
-![Lab Screenshot 1](lab24-1.png)  
-![Lab Screenshot 2](lab24-2.png)  
-![Lab Screenshot 3](lab24-3.png)  
+![Lab Screenshot 1](lab26-1.png)  
+![Lab Screenshot 2](lab26-2.png)  
+![Lab Screenshot 3](lab26-3.png)  
 
 ---
 
