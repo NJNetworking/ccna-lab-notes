@@ -118,11 +118,16 @@ A loopback interface is a virtual interface inside the router. It is always by d
 
 There are three main OSPF network types:
 * Broadcast
-- Enabled by default on both Ethernet and FDDI (Fiber Distributed Data Interfaces) interfaces.
+
+Enabled by default on both Ethernet and FDDI (Fiber Distributed Data Interfaces) interfaces.
+
 * P2P
-- Enabled by default on both PPP (Point-to-Point Protocol) and HDLC (High Data Link Control) interfaces.
+
+ Enabled by default on both PPP (Point-to-Point Protocol) and HDLC (High Data Link Control) interfaces.
+ 
 * Non-Broadcast
-- Enabled by default on Frame Relay and X.25 interfaces.
+
+ Enabled by default on Frame Relay and X.25 interfaces.
 
 ## OSPF Network Broadcast Type
 
@@ -134,6 +139,8 @@ There are three main OSPF network types:
 1. Highest OSPF interface
 2. Highest OSPF router ID
 (note, the interface priority is by default 1 on all interfaces)
+
+
 
 
 
