@@ -1,0 +1,63 @@
+# Lab 34 – OSPF with Named and Numbered ACLs
+
+---
+
+## Summary ##
+
+In this lab session, I configured **OSPF dynamic routing** between two routers and implemented **standard ACLs** (both **named** and **numbered**) to enforce access restrictions between various subnets. The purpose was to demonstrate control over traffic flow using both styles of ACL syntax while ensuring full inter-router communication.
+
+---
+
+## What I Did ##
+
+- Enabled **OSPF area 0** on both routers (R1 and R2) to establish routing across their **serial connection**.
+- Verified dynamic routing worked and that PCs on either side could reach each other initially.
+- On **R2**, created a **named standard ACL**, added the respective ACEs, and applied them to the correct interface in the correct direction.
+  - Verified functionality using targeted **ping tests**.
+- On **R1**, created a **numbered standard ACL**, added ACEs directly, and applied them appropriately.
+  - Again, verified through ping tests from source to destination.
+
+Each policy restriction was applied and validated per the instructions.
+
+---
+
+## Network Overview ##
+
+The topology consisted of:
+
+- **Two routers (R1, R2)** connected via a **serial point-to-point link**.
+- Multiple **subnets** connected to either side of the routers.
+- **Endpoints** (PCs) and **servers** assigned to different subnets:
+  - `192.168.1.0/24`  
+  - `192.168.2.0/24`  
+  - `172.16.1.0/24`  
+  - `172.16.2.0/24`
+
+All devices communicated through the routers, and ACLs were used to selectively **allow or deny** communication based on source IPs.
+
+---
+
+## Applied Access Policies ##
+
+- ✅ **Only PC1 and PC3 can access 192.168.1.0/24**
+- ❌ **172.16.2.0/24 can't access 192.168.2.0/24**
+- ❌ **172.16.1.0/24 can't access 172.16.2.0/24**
+- ❌ **172.16.2.0/24 can't access 172.16.1.0/24**
+
+ACLs were correctly structured to enforce these policies, and test pings confirmed the expected success/failure cases.
+
+---
+
+## Screenshots ##
+
+![Lab Screenshot 1](lab34-1.png)  
+![Lab Screenshot 2](lab34-2.png)
+![Lab Screenshot 2](lab34-3.png)
+
+---
+
+## Wrap-up ##
+
+This lab was a solid demonstration of **how ACLs can control access** between network segments.  
+Using **OSPF** simplified dynamic routing, and the comparison between **named vs. numbered ACLs** reinforced the importance of readability and clarity.  
+Both methods worked, but **named ACLs** were much easier to maintain and understand in the configuration.
